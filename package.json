@@ -1,0 +1,22 @@
+{
+  "name": "as-playground",
+  "version": "0.0.1",
+  "description": "A small personal playground for AssemblyScript. Mostly for making small reproducable test / use cases",
+  "main": "index.js",
+  "scripts": {
+    "add:build": "asc add.ts -b add.wasm -t add.wat --validate -O3z --converge --runtime none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torch2424/as-playground.git"
+  },
+  "author": "Aaron Turner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/torch2424/as-playground/issues"
+  },
+  "homepage": "https://github.com/torch2424/as-playground#readme",
+  "devDependencies": {
+    "assemblyscript": "^0.9.1"
+  }
+}
