@@ -4,7 +4,7 @@
   "description": "A simple add hello world in AS",
   "main": "add.ts",
   "scripts": {
-    "add:build": "asc add.ts -b add.wasm -t add.wat --validate -O3z --converge --runtime none"
+    "build": "asc add.ts -b add.wasm -t add.wat --validate -O3z --converge --runtime none"
   },
   "repository": {
     "type": "git",
