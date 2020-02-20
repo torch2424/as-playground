@@ -1,7 +1,7 @@
 {
-  "name": "map-keys-holey-array",
+  "name": "as-wasi-sleep-memory-leak-array-buffer",
   "version": "1.0.0",
-  "description": "A bug I found with Map.keys()",
+  "description": "As-wasi has a sleep memory leak due to allocating a memory buffer that will error when trying to remove",
   "main": "index.ts",
   "scripts": {
     "build": "asc index.ts -b index.wasm -t index.wat --validate -O3 --use abort=wasi_abort"
