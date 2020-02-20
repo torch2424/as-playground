@@ -1,8 +1,8 @@
 {
-  "name": "as-playground",
+  "name": "add",
   "version": "0.0.1",
-  "description": "A small personal playground for AssemblyScript. Mostly for making small reproducable test / use cases",
-  "main": "index.js",
+  "description": "A simple add hello world in AS",
+  "main": "add.ts",
   "scripts": {
     "add:build": "asc add.ts -b add.wasm -t add.wat --validate -O3z --converge --runtime none"
   },
