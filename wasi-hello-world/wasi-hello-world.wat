@@ -9,8 +9,8 @@
  (type $none_=>_i32 (func (result i32)))
  (type $i32_i32_i32_=>_i32 (func (param i32 i32 i32) (result i32)))
  (type $i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32) (result i32)))
- (import "wasi_snapshot_preview1" "fd_write" (func $~lib/bindings/wasi_snapshot_preview1/fd_write (param i32 i32 i32 i32) (result i32)))
- (import "wasi_snapshot_preview1" "proc_exit" (func $~lib/bindings/wasi_snapshot_preview1/proc_exit (param i32)))
+ (import "wasi_unstable" "fd_write" (func $~lib/bindings/wasi_unstable/fd_write (param i32 i32 i32 i32) (result i32)))
+ (import "wasi_unstable" "proc_exit" (func $~lib/bindings/wasi_unstable/proc_exit (param i32)))
  (memory $0 1)
  (data (i32.const 16) "\1e\00\00\00\01\00\00\00\01\00\00\00\1e\00\00\00~\00l\00i\00b\00/\00r\00t\00/\00p\00u\00r\00e\00.\00t\00s")
  (data (i32.const 64) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00:")
@@ -771,7 +771,7 @@
   i32.const 2
   i32.const 404
   i32.load
-  call $~lib/bindings/wasi_snapshot_preview1/fd_write
+  call $~lib/bindings/wasi_unstable/fd_write
   drop
   local.get $3
   call $~lib/rt/pure/__release
@@ -818,7 +818,7 @@
   local.get $8
   call $~lib/rt/pure/__release
   i32.const 255
-  call $~lib/bindings/wasi_snapshot_preview1/proc_exit
+  call $~lib/bindings/wasi_unstable/proc_exit
   local.get $1
   call $~lib/rt/pure/__release
   local.get $2
