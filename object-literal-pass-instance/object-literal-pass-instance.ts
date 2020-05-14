@@ -36,7 +36,11 @@ export function _start(): void {
     otherClass: otherClass
   });
 
+  // This will all work
   Console.log("Logging myClass.toString() ...\n");
   Console.log(myClass.toString());
   Console.log("\n");
+
+  // Will Error on Exit
+  // ~lib/rt/pure.ts:122:13: error: null
 }
