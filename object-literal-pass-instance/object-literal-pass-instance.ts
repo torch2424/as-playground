@@ -1,3 +1,4 @@
+import "wasi";
 import {Console} from "as-wasi";
 
 class OtherClass {
@@ -26,21 +27,18 @@ class MyClass {
   }
 }
 
-export function _start(): void {
+// Make our Other class
+let otherClass = new OtherClass(24);
 
-  // Make our Other class
-  let otherClass = new OtherClass(24);
+// Pass to my class as an object literal
+let myClass = new MyClass(2424, {
+  otherClass: otherClass
+});
 
-  // Pass to my class as an object literal
-  let myClass = new MyClass(2424, {
-    otherClass: otherClass
-  });
+// This will all work
+Console.log("Logging myClass.toString() ...\n");
+Console.log(myClass.toString());
+Console.log("\n");
 
-  // This will all work
-  Console.log("Logging myClass.toString() ...\n");
-  Console.log(myClass.toString());
-  Console.log("\n");
-
-  // Will Error on Exit
-  // ~lib/rt/pure.ts:122:13: error: null
-}
+// Will Error on Exit
+// ~lib/rt/pure.ts:122:13: error: null

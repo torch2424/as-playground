@@ -9,7 +9,7 @@
   "author": "Aaron Turner",
   "license": "MIT",
   "devDependencies": {
-    "assemblyscript": "^0.9.2"
+    "assemblyscript": "^0.10.0"
   },
   "dependencies": {
     "as-wasi": "git+https://github.com/jedisct1/as-wasi.git"
