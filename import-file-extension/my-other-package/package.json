@@ -1,0 +1,11 @@
+{
+  "name": "my-other-package",
+  "version": "0.0.1",
+  "ascMain": "assembly/index.ts",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.9.4"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.9.4"
+  }
+}
