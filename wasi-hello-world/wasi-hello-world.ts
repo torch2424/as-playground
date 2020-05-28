@@ -1,7 +1,5 @@
-
+import "wasi"
 
 import {Console} from "as-wasi"
+Console.log('Hello World!\n');
 
-export function _start(): void {
-  Console.log('Hello World!\n');
-}
